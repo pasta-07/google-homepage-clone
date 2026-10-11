@@ -1,0 +1,222 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+
+/* Page Layout */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+}
+
+
+/* Header / Navigation */
+header {
+    width: 100%;
+    padding: 20px 25px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-left,
+.nav-right {
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #202124;
+    font-size: 13px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* Main Content */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+
+/* Google Logo */
+h1 {
+    font-size: 80px;
+    font-weight: 500;
+    letter-spacing: -5px;
+    margin-bottom: 25px;
+}
+
+.blue {
+    color: #4285f4;
+}
+
+.red {
+    color: #ea4335;
+}
+
+.yellow {
+    color: #fbbc05;
+}
+
+.green {
+    color: #34a853;
+}
+
+
+/* Search Form */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+
+/* Accessible Label */
+label[for="search"] {
+    position: absolute;
+    left: -10000px;
+}
+
+
+/* Search Input */
+input[type="search"] {
+    width: 500px;
+    height: 44px;
+    padding: 0 18px;
+    font-size: 16px;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    outline: none;
+}
+
+input[type="search"]:hover {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.20);
+}
+
+input[type="search"]:focus {
+    border-color: #4285f4;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.20);
+}
+
+
+/* Buttons */
+.button-group {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    padding: 0 16px;
+    height: 36px;
+    cursor: pointer;
+}
+
+button:hover {
+    border-color: #dadce0;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+button:focus-visible,
+nav a:focus-visible,
+footer a:focus-visible {
+    outline: 2px solid #4285f4;
+    outline-offset: 3px;
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: #f2f2f2;
+    border-top: 1px solid #dadce0;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #70757a;
+    font-size: 14px;
+}
+
+.footer-left,
+.footer-right {
+    display: flex;
+    gap: 27px;
+}
+
+footer a {
+    color: #70757a;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/* Mobile / Responsive Design */
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px;
+    }
+
+    .nav-left,
+    .nav-right {
+        gap: 12px;
+    }
+
+    nav a {
+        font-size: 12px;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    input[type="search"] {
+        width: 90vw;
+        max-width: 500px;
+    }
+
+    .button-group {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .footer-left,
+    .footer-right {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
